@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Full Stack Developer building scalable and responsive web applications."
+    />
+    <meta
+      name="keywords"
+      content="Full Stack Developer, JavaScript, Web Developer, Portfolio"
+    />
+    <meta name="author" content="Prof.Semahegn TD" />
+    <title>Prof. Semahegn TD | Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">Prof.Seme.TD</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="toggle-btn" aria-label="Toggle theme">
+          ☀
+        </button>
+        <div class="hamburger" id="hamburger" aria-label="Open menu">☰</div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content reveal">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">portfolio-terminal</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> whoami</p>
+            <p class="terminal-highlight">Prof. Semahegn TD</p>
+
+            <p><span class="prompt">$</span> role</p>
+            <h1 class="glow">
+              <span id="typing"></span><span class="blink">|</span>
+            </h1>
+
+            <p><span class="prompt">$</span> mission</p>
+            <p>
+              I design and develop scalable web applications — from intuitive
+              frontends to secure backend systems.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#projects" class="btn primary">View Projects</a>
+              <a href="#" class="btn secondary">Download Resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="orbit-wrapper">
+          <div class="orbit-center">
+            <img src="assets/profile.jpg" alt="Profile" />
+          </div>
+
+          <div class="orbit orbit-1">
+            <span class="tech tech-1">HTML</span>
+            <span class="tech tech-2">CSS</span>
+            <span class="tech tech-3">JS</span>
+            <span class="tech tech-4">Node</span>
+          </div>
+
+          <div class="orbit orbit-2">
+            <span class="tech tech-5">Express</span>
+            <span class="tech tech-6">MongoDB</span>
+            <span class="tech tech-7">Git</span>
+            <span class="tech tech-8">REST API</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-text">
+        I am a Full Stack Developer specializing in modern JavaScript
+        development. I build responsive frontend interfaces and secure backend
+        systems with clean architecture, performance optimization, and
+        scalability in mind. I am actively seeking remote and local
+        opportunities to contribute to innovative teams.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section dark reveal">
+      <h2 class="section-title">Technical Skills</h2>
+
+      <div class="skills-container">
+        <div class="skill-box">
+          <h3>Frontend</h3>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Responsive Design</li>
+            <li>REST API Integration</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>Authentication (JWT)</li>
+            <li>MongoDB / SQL / PostgreSQL</li>
+            <li>API Development</li>
+          </ul>
+        </div>
+
+        <div class="skill-box">
+          <h3>Tools</h3>
+          <ul>
+            <li>Git & GitHub</li>
+            <li>Postman</li>
+            <li>Deployment</li>
+            <li>Version Control</li>
+            <li>Debugging</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section reveal">
+      <h2 class="section-title">Featured Projects</h2>
+
+      <div class="filter-buttons">
+        <button type="button" onclick="filterProjects('all')">All</button>
+        <button type="button" onclick="filterProjects('frontend')">
+          Frontend
+        </button>
+        <button type="button" onclick="filterProjects('backend')">
+          Backend
+        </button>
+        <button type="button" onclick="filterProjects('fullstack')">
+          Full Stack
+        </button>
+      </div>
+
+      <div class="projects-container">
+        <div
+          class="project-card card-3d fullstack"
+          onclick="
+            openModal(
+              'Full Stack Task Manager',
+              'This project includes user authentication, REST API integration, and full CRUD functionality with database persistence.',
+            )
+          "
+        >
+          <div class="card-glow"></div>
+          <div class="project-card-inner">
+            <h3>Full Stack Task Manager</h3>
+            <p>
+              Auth, CRUD operations, API integration, and persistent database
+              support.
+            </p>
+            <div class="project-tags">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#" onclick="event.stopPropagation()">Live</a>
+              <a href="#" onclick="event.stopPropagation()">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="project-card card-3d frontend"
+          onclick="
+            openModal(
+              'E-commerce Interface',
+              'Responsive frontend with dynamic cart functionality and API integration.',
+            )
+          "
+        >
+          <div class="card-glow"></div>
+          <div class="project-card-inner">
+            <h3>E-commerce Interface</h3>
+            <p>
+              Responsive UI with dynamic cart behavior and external API support.
+            </p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" onclick="event.stopPropagation()">Live</a>
+              <a href="#" onclick="event.stopPropagation()">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="project-card card-3d backend"
+          onclick="
+            openModal(
+              'REST API Backend',
+              'Secure backend API with authentication and CRUD operations.',
+            )
+          "
+        >
+          <div class="card-glow"></div>
+          <div class="project-card-inner">
+            <h3>REST API Backend</h3>
+            <p>
+              Secure backend architecture with authentication and CRUD logic.
+            </p>
+            <div class="project-tags">
+              <span>JWT</span>
+              <span>REST</span>
+              <span>Database</span>
+            </div>
+            <div class="project-links">
+              <a href="#" onclick="event.stopPropagation()">Live</a>
+              <a href="#" onclick="event.stopPropagation()">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB CONTRIBUTION SECTION -->
+    <section id="github" class="section dark reveal">
+      <h2 class="section-title">GitHub Contribution Graph</h2>
+      <p class="section-text github-subtext">
+        GitHub-style activity heatmap preview.
+      </p>
+
+      <div class="github-card">
+        <div class="github-top">
+          <h3>Contribution Activity</h3>
+          <span>Last 24 Weeks</span>
+        </div>
+
+        <div class="github-grid" id="githubGrid"></div>
+
+        <div class="github-legend">
+          <span>Less</span>
+          <div class="legend-box level-0"></div>
+          <div class="legend-box level-1"></div>
+          <div class="legend-box level-2"></div>
+          <div class="legend-box level-3"></div>
+          <div class="legend-box level-4"></div>
+          <span>More</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <h2 class="section-title">Contact</h2>
+      <p>Email: yegnabetsew@gmail.com</p>
+      <p>GitHub: github.com/semahegn-tilahun</p>
+      <p>LinkedIn: linkedin.com/in/semahegn-tilahun-d</p>
+    </section>
+
+    <!-- CHATBOT -->
+    <div class="chatbot-toggle" id="chatbotToggle">💬</div>
+
+    <div class="chatbot" id="chatbot">
+      <div class="chatbot-header">
+        <h3>AI Assistant</h3>
+        <button id="closeChatbot">✕</button>
+      </div>
+
+      <div class="chatbot-body" id="chatbotBody">
+        <div class="bot-message">
+          Hi, I’m the portfolio assistant. Ask about skills, projects, or
+          contact.
+        </div>
+      </div>
+
+      <div class="chatbot-footer">
+        <input type="text" id="chatbotInput" placeholder="Type a message..." />
+        <button id="sendChat">Send</button>
+      </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 Prof.Seme.TD | Full Stack Developer</p>
+    </footer>
+
+    <div class="cursor"></div>
+  </body>
+</html>
